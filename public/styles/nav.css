@@ -1,0 +1,35 @@
+
+
+
+
+
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+nav .nav-logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 30px;
+  align-self: center;
+
+}
+
+nav .new-tweet {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav .fa-angle-double-down {
+  color: red;
+}
