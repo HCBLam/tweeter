@@ -1,0 +1,18 @@
+
+
+header {
+  height: 400px;
+  width: 100%;
+  background-color: lavender;
+  background-image: url("../images/arabesque.png");
+  /* position: aboslute; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* header .user-name {
+  margin: 0;
+} */
