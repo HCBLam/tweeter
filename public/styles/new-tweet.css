@@ -2,7 +2,7 @@
 
 
 
-.input-area {
+#tweet-text {
   /* border-style: none none solid none; */
   border-width: 0 0 thick 0;
   width: 100%;
@@ -10,13 +10,6 @@
   background-color: #f4f1ec;
   outline: none;
 }
-
-
-
-
-
-
-
 
 
 .button-counter {
@@ -35,6 +28,10 @@
 
 }
 
+.exceed-limit {
+  font-family: "Bungee", sans-serif;
+  color: red;
+}
 
 
 
