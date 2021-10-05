@@ -28,7 +28,7 @@ main {
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 
 
 }

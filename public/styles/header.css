@@ -12,7 +12,7 @@ header {
   align-items: center;
 }
 
-
-/* header .user-name {
+/*  This is optional for the moment to bring the avatar closer to the name  */
+header .user-name {
   margin: 0;
-} */
+}

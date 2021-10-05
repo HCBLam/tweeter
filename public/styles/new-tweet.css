@@ -1,0 +1,40 @@
+
+
+
+
+.input-area {
+  /* border-style: none none solid none; */
+  border-width: 0 0 thick 0;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f4f1ec;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+.button-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  font-family: "Bungee", sans-serif;
+  background-color: #4056A1;
+  color: white;
+}
+
+.tweet-counter {
+  font-family: "Bungee", sans-serif;
+
+}
+
+
+
+

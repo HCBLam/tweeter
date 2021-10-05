@@ -22,13 +22,12 @@ nav .nav-logo {
 
 }
 
-nav .new-tweet {
+nav .write-tweet {
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 nav .fa-angle-double-down {
