@@ -35,6 +35,7 @@ $(() => {
   };
 
 
+
   const renderTweets = function(tweets) {
     const $tweetsContainer = $(".tweets-container");
     // $tweetsContainer.empty();
@@ -44,6 +45,7 @@ $(() => {
       $tweetsContainer.append($tweet);
     };
   };
+
 
 
   const loadTweets = function() {
@@ -68,6 +70,37 @@ $(() => {
   loadTweets();
 
 
+
+
+
+
+  // const tweetValidation = function(tweet) {
+  //   if (!tweet || tweet === '') {
+  //     return alert('Your tweet is empty! No one will hear you!');
+  //   }
+  //   if (tweet.length > 140) {
+  //     return alert('Your tweet is too long!');
+  //   }
+  //   return true;
+  // }
+
+
+  // const $tweetText = $("#tweet-text").val();
+
+  // if (!$tweetText || $tweetText === '') {
+  //   alert('Your tweet is empty! No one can hear it!')
+  //   return;
+  // }
+
+  // if ($tweetText > 140) {
+  //   return alert('Your tweet is too long!');
+  // }
+
+
+
+
+
+
   const $tweetForm = $(".tweet-form");
   $tweetForm.submit((event) => {
     event.preventDefault();
@@ -75,10 +108,10 @@ $(() => {
     const serializeTweet = $tweetForm.serialize();
 
     $.post("/tweets/", serializeTweet, () => {
-      // console.log(response);
       loadTweets();
     });
   });
+
 
 
 
