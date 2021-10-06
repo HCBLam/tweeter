@@ -9,6 +9,21 @@ $(() => {
 
 
 
+
+  const $tweetForm = $(".tweet-form");
+  $tweetForm.submit((event) => {
+    event.preventDefault();
+
+    const serializeTweet = $tweetForm.serialize();
+
+    $.post("/tweets/", serializeTweet, (response) => {
+      console.log(response);
+    });
+  });
+
+
+
+
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`
@@ -34,7 +49,7 @@ $(() => {
       </article>
     `);
     return $tweet;
-  }
+  };
 
 
   const renderTweets = function(tweets) {
@@ -44,8 +59,8 @@ $(() => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.append($tweet);
-    }
-  }
+    };
+  };
 
 
 
@@ -90,7 +105,7 @@ const data = [
   },
   "created_at": 1633438673665
   }
-]
+];
 
 renderTweets(data);
 
