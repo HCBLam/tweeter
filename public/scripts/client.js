@@ -7,23 +7,6 @@
 
 $(() => {
 
-
-
-
-  const $tweetForm = $(".tweet-form");
-  $tweetForm.submit((event) => {
-    event.preventDefault();
-
-    const serializeTweet = $tweetForm.serialize();
-
-    $.post("/tweets/", serializeTweet, (response) => {
-      console.log(response);
-    });
-  });
-
-
-
-
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`
@@ -63,51 +46,40 @@ $(() => {
   };
 
 
+  const loadTweets = function() {
 
+    $.ajax({
+      url: "/tweets/",
+      method: "GET",
+      dataType: "json",
+      success: (tweets) => {
+        renderTweets(tweets);
+      },
+      error: (err) => {
+        console.log('Could not get the tweets information.');
+      }
+    });
 
-
-
-
-
-// Test / driver code (temporary). Eventually will get this from the server.
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Marie",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@MCurrie"
-    },
-    "content": {
-      "text": "Nothing in life is to be feared, it is only to be understood."
-    },
-    "created_at": 1561116232227
-  },
-  {
-  "user": {
-    "name": "Descartes",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@rd"
-  },
-  "content": {
-    "text": "Je pense , donc je suis"
-  },
-  "created_at": 1633438673665
+    // $.get("/tweets/", function(tweets) {
+    //   renderTweets(tweets)
+    // }, "json");
   }
-];
 
-renderTweets(data);
+  loadTweets();
+
+
+  const $tweetForm = $(".tweet-form");
+  $tweetForm.submit((event) => {
+    event.preventDefault();
+
+    const serializeTweet = $tweetForm.serialize();
+
+    $.post("/tweets/", serializeTweet, () => {
+      // console.log(response);
+      loadTweets();
+    });
+  });
+
 
 
 });
