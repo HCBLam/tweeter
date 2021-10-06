@@ -5,26 +5,27 @@
  */
 
 
-$(document).ready(function () {
+$(() => {
+
+
 
 
   const createTweetElement = function(tweet) {
-
 
     const $tweet = $(`
       <article class="tweet">
         <header class="tweet-header">
           <div class="persona">
-            <img class="avatar" src="https://i.imgur.com/73hZDYK.png">
-            <p>Newton</p>
+            <img class="avatar" src="${tweetData.user.avatars}">
+            <p>${tweetData.user.name}</p>
           </div>
-          <p class="handle">@SirIsaac</p>
+          <p class="handle">${tweetData.user.handle}</p>
         </header>
         <div class="statement">
-          If I have seen further it is by standing on the shoulders of giants.
+          ${tweetData.content.text}
         </div>
         <footer class="tweet-footer">
-          <div class="date">10 days ago</div>
+          <div class="date">${tweetData.created_at}</div>
           <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -33,19 +34,12 @@ $(document).ready(function () {
         </footer>
       </article>
     `);
-
-
-
+    return $tweet;
   }
 
 
 
 
-
-
-
-
-});
 
 
 
@@ -69,7 +63,17 @@ const $tweet = createTweetElement(tweetData);
 
 // Test / driver code (temporary)
 console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet);
+$('.tweets-container').append($tweet);
+
+
+
+});
+
+
+
+
+
+
 
 
 

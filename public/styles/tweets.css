@@ -1,18 +1,18 @@
 
-/* Box-shadow effect for the tweets */
-.tweets-container:hover {
-  box-shadow: 5px 5px grey;
-}
-
 
 /* The tweet article */
 .tweet {
   margin-top: 30px;
+  margin-bottom: 50px;
   padding: 1.25em;
   border: 5px solid grey;
   /* display: flex; */
 }
 
+/* The tweet article box-hadow effect */
+.tweet:hover {
+  box-shadow: 5px 5px grey;
+}
 
 /* The tweet article header */
 .tweet-header {
