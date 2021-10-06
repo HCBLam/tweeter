@@ -1,20 +1,19 @@
 
 
-
-
-
+/* The main Nav Bar */
 nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 0 1.5em 0 1.5em;
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
 }
 
+/* The Tweeter Logo in Nav Bar */
 nav .nav-logo {
   font-family: 'Bungee', sans-serif;
   font-size: 30px;
@@ -22,6 +21,7 @@ nav .nav-logo {
 
 }
 
+/* The "Write a New Tweet" in the Nav Bar */
 nav .write-tweet {
   font-size: 20px;
   display: flex;
@@ -30,6 +30,7 @@ nav .write-tweet {
   align-items: center;
 }
 
+/* The Double-Down Arrows */
 nav .fa-angle-double-down {
   color: red;
 }

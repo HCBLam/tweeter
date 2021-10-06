@@ -13,7 +13,8 @@ $(document).ready(function () {
     let counter = 140;
     let tweetLength = ($(this).val()).length;
     counter = counter - tweetLength;
-    $(".tweet-counter").text(counter);
+    // $(".tweet-counter").text(counter);
+    $(this).next().children(".tweet-counter").text(counter);
 
 
     if (counter < 0) {

@@ -22,14 +22,13 @@ body {
 
 }
 
+/* The Main part of the body */
 main {
   margin-right: 5%;
   margin-left: 5%;
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-
 
 }
 

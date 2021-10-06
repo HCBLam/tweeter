@@ -1,0 +1,65 @@
+
+
+/* The container for tweets */
+.tweets {
+  margin-top: 30px;
+  padding: 1.25em;
+  border: 5px solid grey;
+  /* display: flex; */
+}
+
+/* Box-shadow effect for the tweets container */
+.tweets :hover {
+  box-shadow: 5px 5px grey;
+}
+
+/* The tweet's container header */
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/* The tweet's avatar and user name section */
+article .persona {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* The tweet's user name */
+.persona p {
+  margin-left: 20px;
+}
+
+/* The tweet's user handle */
+.handle {
+  color: rgb(185, 179, 179);
+}
+
+/* The tweet's text display line */
+.statement {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid grey;
+}
+
+/* The tweet's footer */
+.tweet-footer {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The tweet's footer icons */
+i {
+  padding-left: 10px;
+}
+
+/* The tweet's footer icon hover effect */
+.tweet-footer .icons :hover {
+  color: darkgoldenrod;
+}
+

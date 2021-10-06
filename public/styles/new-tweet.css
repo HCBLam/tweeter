@@ -1,33 +1,39 @@
 
 
 
-
+/* The main form to write new tweets */
 #tweet-text {
-  /* border-style: none none solid none; */
   border-width: 0 0 thick 0;
+  border-color: grey;
   width: 100%;
+  margin-top: 10px;
   margin-bottom: 10px;
   background-color: #f4f1ec;
   outline: none;
 }
 
 
+/* The footer for the main form */
 .button-counter {
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }
 
+/* The button to submit new tweets */
 .tweet-button {
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
   color: white;
 }
 
+/* The counter to track the number of characters in the tweet */
 .tweet-counter {
   font-family: "Bungee", sans-serif;
 
 }
 
+/* The counter will turn red if character limit is exceeded */
 .exceed-limit {
   font-family: "Bungee", sans-serif;
   color: red;

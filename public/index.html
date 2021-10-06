@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -26,8 +27,8 @@
   </head>
 
 
-
   <body>
+
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="nav-logo">tweeter</span>
@@ -37,8 +38,8 @@
       </span>
     </nav>
 
-
-    <header>
+    <!-- Main header -->
+    <header id="main-header">
       <div>
           <img class="avatar" src="/images/profile-hex.png">
       </div>
@@ -49,15 +50,10 @@
   </header>
 
 
-
-
-
-
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-
-
+      <!-- Form for composing new tweets -->
       <section>
         <h2>Compose Tweet</h2>
         <form class="tweet-form" action="/tweets/" method="POST">
@@ -70,6 +66,32 @@
         </form>
       </section>
 
+      <!-- Container for tweets -->
+      <section class="tweet-area">
+        <article class="tweets">
+          <header class="tweet-header">
+            <div class="persona">
+              <img class="avatar" src="https://i.imgur.com/73hZDYK.png">
+              <p>Newton</p>
+            </div>
+            <p class="handle">@SirIsaac</p>
+          </header>
+          <div class="statement">
+            If I have seen further, it is by standing on the shoulders of giants.
+          </div>
+
+          <footer class="tweet-footer">
+            <div class="date">10 days ago</div>
+            <div class="icons">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+
+          </footer>
+        </article>
+
+      </section>
 
 
     </main>

@@ -1,6 +1,6 @@
 
-
-header {
+/* The main Header for Tweeter */
+#main-header {
   height: 400px;
   width: 100%;
   margin-top: 120px;
@@ -13,6 +13,7 @@ header {
 }
 
 /*  This is optional for the moment to bring the avatar closer to the name  */
+/* The User Name in the main Header */
 header .user-name {
   margin: 0;
 }
