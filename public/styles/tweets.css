@@ -1,43 +1,44 @@
 
+/* Box-shadow effect for the tweets */
+.tweets-container:hover {
+  box-shadow: 5px 5px grey;
+}
 
-/* The container for tweets */
-.tweets {
+
+/* The tweet article */
+.tweet {
   margin-top: 30px;
   padding: 1.25em;
   border: 5px solid grey;
   /* display: flex; */
 }
 
-/* Box-shadow effect for the tweets container */
-.tweets :hover {
-  box-shadow: 5px 5px grey;
-}
 
-/* The tweet's container header */
+/* The tweet article header */
 .tweet-header {
   display: flex;
   justify-content: space-between;
   align-content: center;
 }
 
-/* The tweet's avatar and user name section */
+/* The tweet article avatar and user name section */
 article .persona {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* The tweet's user name */
-.persona p {
+/* The tweet article user name */
+.persona > p {
   margin-left: 20px;
 }
 
-/* The tweet's user handle */
+/* The tweet article user handle */
 .handle {
   color: rgb(185, 179, 179);
 }
 
-/* The tweet's text display line */
+/* The tweet article text display line */
 .statement {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -46,19 +47,19 @@ article .persona {
   border-bottom: 5px solid grey;
 }
 
-/* The tweet's footer */
+/* The tweet article footer */
 .tweet-footer {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-/* The tweet's footer icons */
-i {
+/* The tweet article footer icons */
+.icons > i {
   padding-left: 10px;
 }
 
-/* The tweet's footer icon hover effect */
+/* The tweet article footer icon hover effect */
 .tweet-footer .icons :hover {
   color: darkgoldenrod;
 }
