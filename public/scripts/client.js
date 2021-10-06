@@ -25,7 +25,7 @@ $(() => {
           ${tweetData.content.text}
         </div>
         <footer class="tweet-footer">
-          <div class="date">${tweetData.created_at}</div>
+          <div class="date">${timeago.format(tweetData.created_at)}</div>
           <div class="icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
