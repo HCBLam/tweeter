@@ -42,7 +42,7 @@ $(() => {
 
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $tweetsContainer.append($tweet);
+      $tweetsContainer.prepend($tweet);
     };
   };
 
@@ -74,42 +74,33 @@ $(() => {
 
 
 
-  // const tweetValidation = function(tweet) {
-  //   if (!tweet || tweet === '') {
-  //     return alert('Your tweet is empty! No one will hear you!');
-  //   }
-  //   if (tweet.length > 140) {
-  //     return alert('Your tweet is too long!');
-  //   }
-  //   return true;
-  // }
-
-
-  // const $tweetText = $("#tweet-text").val();
-
-  // if (!$tweetText || $tweetText === '') {
-  //   alert('Your tweet is empty! No one can hear it!')
-  //   return;
-  // }
-
-  // if ($tweetText > 140) {
-  //   return alert('Your tweet is too long!');
-  // }
-
-
-
-
-
-
   const $tweetForm = $(".tweet-form");
   $tweetForm.submit((event) => {
     event.preventDefault();
+
+
+    const $tweetText = $("#tweet-text").val();
+    if (!$tweetText || $tweetText === '') {
+      alert('Your tweet is empty! No one can hear it!')
+      return;
+    }
+
+    if ($tweetText.length > 140) {
+      alert('Your tweet is too long!');
+      return;
+    }
+
 
     const serializeTweet = $tweetForm.serialize();
 
     $.post("/tweets/", serializeTweet, () => {
       loadTweets();
+      $("#tweet-text").val('');
+      $('#tweet-count').text(140);
+      // $(this).children(".button-counter").children("tweet-counter").text(140);
+      //console.log this to see what value you get
     });
+
   });
 
 
