@@ -7,6 +7,14 @@
 
 $(() => {
 
+
+  const escapeText = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
   const createTweetElement = function(tweet) {
 
     const $tweet = $(`
@@ -19,7 +27,7 @@ $(() => {
           <p class="handle">${tweet.user.handle}</p>
         </header>
         <div class="statement">
-          ${tweet.content.text}
+          ${escapeText(tweet.content.text)}
         </div>
         <footer class="tweet-footer">
           <div class="date">${timeago.format(tweet.created_at)}</div>
@@ -71,6 +79,8 @@ $(() => {
 
 
 
+  // $("#error-warning").slidedown.("fast", function() {
+  // })
 
 
 
@@ -81,24 +91,28 @@ $(() => {
 
     const $tweetText = $("#tweet-text").val();
     if (!$tweetText || $tweetText === '') {
-      alert('Your tweet is empty! No one can hear it!')
-      return;
+
+      // alert('Your tweet is empty! No one can hear it!')
+      // return;
     }
 
     if ($tweetText.length > 140) {
-      alert('Your tweet is too long!');
-      return;
+
+      // alert('Your tweet is too long!');
+      // return;
     }
 
 
     const serializeTweet = $tweetForm.serialize();
-
     $.post("/tweets/", serializeTweet, () => {
       loadTweets();
+
       // Reset the text input after submission
       $("#tweet-text").val('');
+
       // Reset the counter after submission
       $('#tweet-count').text(140);
+
       // $(this).children(".button-counter").children("tweet-counter").text(140);
       //console.log this to see what value you get
     });
