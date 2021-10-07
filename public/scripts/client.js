@@ -7,6 +7,7 @@
 
 $(() => {
 
+  $("div#error-warning").hide();
 
   const escapeText = function (str) {
     let div = document.createElement("div");

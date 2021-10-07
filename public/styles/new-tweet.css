@@ -1,4 +1,6 @@
 
+
+/* The tweet validation error message */
 #error-warning {
   border: 5px solid red;
   width: 100%;
@@ -12,17 +14,21 @@
   justify-content: space-evenly;
 }
 
-/* The main form to write new tweets */
+/* The main form for new tweets */
+#tweeter-form {
+  margin-top: 60px;
+}
+
+/* The text input for new tweets */
 #tweet-text {
   border-width: 0 0 thick 0;
   border-color: grey;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: #f4f1ec;
   outline: none;
 }
-
 
 /* The footer for the main form */
 .button-counter {
@@ -49,6 +55,4 @@
   font-family: "Bungee", sans-serif;
   color: red;
 }
-
-
 

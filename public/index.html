@@ -56,7 +56,7 @@
 
 
       <!-- Form for composing new tweets -->
-      <section>
+      <section class="new-tweet">
         <div id="error-warning">
           <i class="fas fa-exclamation"></i>
           <p class="error-message">Your tweet is empty! No sound is heard!</p>
@@ -64,7 +64,7 @@
         </div>
         <!-- <h2>Compose Tweet</h2> -->
         <form id="tweeter-form" class="tweet-form" action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
+          <label class="humming" for="tweet-text">What are you humming about?</label>
           <textarea id="tweet-text" name="text"></textarea>
           <div class="button-counter">
             <button class="tweet-button" type="submit">Tweet</button>
