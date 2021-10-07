@@ -95,7 +95,9 @@ $(() => {
 
     $.post("/tweets/", serializeTweet, () => {
       loadTweets();
+      // Reset the text input after submission
       $("#tweet-text").val('');
+      // Reset the counter after submission
       $('#tweet-count').text(140);
       // $(this).children(".button-counter").children("tweet-counter").text(140);
       //console.log this to see what value you get
