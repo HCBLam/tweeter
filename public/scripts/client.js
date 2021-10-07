@@ -9,6 +9,13 @@ $(() => {
 
   $("div#error-warning").hide();
 
+  const errorMessage = function(message) {
+    $("div#error-warning").slideUp();
+    $(".error-message").html(`${message}`).parent().slideDown();
+  };
+
+
+
   const escapeText = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -16,8 +23,8 @@ $(() => {
   };
 
 
-  const createTweetElement = function(tweet) {
 
+  const createTweetElement = function(tweet) {
     const $tweet = $(`
       <article class="tweet">
         <header class="tweet-header">
@@ -58,7 +65,6 @@ $(() => {
 
 
   const loadTweets = function() {
-
     $.ajax({
       url: "/tweets/",
       method: "GET",
@@ -70,18 +76,9 @@ $(() => {
         console.log('Could not get the tweets information.');
       }
     });
-
-    // $.get("/tweets/", function(tweets) {
-    //   renderTweets(tweets)
-    // }, "json");
   }
 
   loadTweets();
-
-
-
-  // $("#error-warning").slidedown.("fast", function() {
-  // })
 
 
 
@@ -89,20 +86,21 @@ $(() => {
   $tweetForm.submit((event) => {
     event.preventDefault();
 
-
     const $tweetText = $("#tweet-text").val();
-    if (!$tweetText || $tweetText === '') {
 
-      // alert('Your tweet is empty! No one can hear it!')
-      // return;
+    if (!$tweetText.trim() || $tweetText.trim() === '') {
+      const emptyMsg = 'Your tweet is empty! Please write something tweety!'
+      errorMessage(emptyMsg);
+      return;
     }
 
     if ($tweetText.length > 140) {
-
-      // alert('Your tweet is too long!');
-      // return;
+      const longMsg = 'Your tweet is over the character limit!'
+      errorMessage(longMsg);
+      return;
     }
 
+    $("div#error-warning").slideUp();
 
     const serializeTweet = $tweetForm.serialize();
     $.post("/tweets/", serializeTweet, () => {
