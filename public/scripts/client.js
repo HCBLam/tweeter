@@ -89,12 +89,14 @@ $(() => {
     const $tweetText = $("#tweet-text").val();
 
     if (!$tweetText.trim() || $tweetText.trim() === '') {
+      $("div#error-warning").slideUp();
       const emptyMsg = 'Your tweet is empty! Please write something tweety!'
       errorMessage(emptyMsg);
       return;
     }
 
     if ($tweetText.length > 140) {
+      $("div#error-warning").slideUp();
       const longMsg = 'Your tweet is over the character limit!'
       errorMessage(longMsg);
       return;
