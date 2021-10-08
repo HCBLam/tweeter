@@ -1,4 +1,5 @@
 
+
 /* The main Header for Tweeter */
 #main-header {
   height: 400px;
@@ -12,7 +13,6 @@
   align-items: center;
 }
 
-/*  This is optional for the moment to bring the avatar closer to the name  */
 /* The User Name in the main Header */
 header .user-name {
   margin: 0;

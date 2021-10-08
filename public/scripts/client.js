@@ -4,18 +4,20 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(() => {
 
+  // Hide the empty tweet or character limit error upon loading the page
   $("div#error-warning").hide();
 
+
+  // Display error message function
   const errorMessage = function(message) {
     $("div#error-warning").slideUp();
     $(".error-message").html(`${message}`).parent().slideDown();
   };
 
 
-
+  // Escape function to prevent XSS
   const escapeText = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -23,7 +25,7 @@ $(() => {
   };
 
 
-
+  // The form to write a new tweet
   const createTweetElement = function(tweet) {
     const $tweet = $(`
       <article class="tweet">
@@ -51,7 +53,7 @@ $(() => {
   };
 
 
-
+  // To render all the tweets in the database
   const renderTweets = function(tweets) {
     const $tweetsContainer = $(".tweets-container");
     $tweetsContainer.empty();
@@ -63,7 +65,7 @@ $(() => {
   };
 
 
-
+  // Request to get all tweets from the server
   const loadTweets = function() {
     $.ajax({
       url: "/tweets/",
@@ -81,13 +83,14 @@ $(() => {
   loadTweets();
 
 
-
+  // Request to post a new tweet to the server
   const $tweetForm = $(".tweet-form");
   $tweetForm.submit((event) => {
     event.preventDefault();
 
     const $tweetText = $("#tweet-text").val();
 
+    // Validation check to see if the input is empty; slide down error message
     if (!$tweetText.trim() || $tweetText.trim() === '') {
       $("div#error-warning").slideUp();
       const emptyMsg = 'Your tweet is empty! Please write something tweety!'
@@ -95,6 +98,7 @@ $(() => {
       return;
     }
 
+    // Validation check to see if the input is too long; slide down error message
     if ($tweetText.length > 140) {
       $("div#error-warning").slideUp();
       const longMsg = 'Your tweet is over the character limit!'
@@ -102,27 +106,21 @@ $(() => {
       return;
     }
 
+    // Slide any error message back up before posting a valid tweet
     $("div#error-warning").slideUp();
 
+    // Encode and post the tweet to the server
     const serializeTweet = $tweetForm.serialize();
     $.post("/tweets/", serializeTweet, () => {
       loadTweets();
 
-      // Reset the text input after submission
+      // Reset the text input area after submission
       $("#tweet-text").val('');
 
-      // Reset the counter after submission
+      // Reset the character counter after submission
       $('#tweet-count').text(140);
-
-      // $(this).children(".button-counter").children("tweet-counter").text(140);
-      //console.log this to see what value you get
     });
-
   });
-
-
-
-
 });
 
 

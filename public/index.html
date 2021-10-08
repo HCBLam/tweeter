@@ -29,63 +29,57 @@
 
     <!-- Disable Viewport Zooming -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-
   </head>
-
 
   <body>
 
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="nav-logo">tweeter</span>
-      <span class ="write-tweet">
-        <span><b>Write</b> a new tweet</span>
-        <i class="fas fa-angle-double-down"></i>
-      </span>
-    </nav>
+      <!-- Top nav bar (fixed) -->
+      <nav>
+        <span class="nav-logo">tweeter</span>
+        <span class ="write-tweet">
+          <span><b>Write</b> a new tweet</span>
+          <i class="fas fa-angle-double-down"></i>
+        </span>
+      </nav>
 
-  <section class="desktop-view">
-    <!-- Main header -->
-    <header id="main-header">
-      <div>
+    <!-- Section to hold elements for desktop layout -->
+    <section class="desktop-view">
+     <!-- Main header -->
+      <header id="main-header">
+        <div>
           <img class="avatar" src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-          <h2 class="user-name">Tweeter Fan</h2>
-      </div>
-  </header>
-
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-
-      <section class="new-tweet">
-        <!-- Tweet error message display -->
-        <div id="error-warning">
-          <i class="fas fa-exclamation"></i>
-          <p class="error-message"></p>
-          <i class="fas fa-exclamation"></i>
         </div>
+        <br>
+        <div>
+          <h2 class="user-name">Tweeter Fan</h2>
+        </div>
+      </header>
 
-        <!-- Form for composing new tweets -->
-        <form id="tweeter-form" class="tweet-form" action="/tweets/" method="POST">
-          <label class="humming" for="tweet-text">What are you humming about?</label>
-          <textarea id="tweet-text" name="text"></textarea>
-          <div class="button-counter">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output id="tweet-count" class="tweet-counter" name="counter" for="tweet-text">140</output>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+
+        <section class="new-tweet">
+         <!-- Tweet error message display -->
+          <div id="error-warning">
+            <i class="fas fa-exclamation"></i>
+            <p class="error-message"></p>
+            <i class="fas fa-exclamation"></i>
           </div>
-        </form>
-      </section>
 
+           <!-- Form for composing new tweets -->
+          <form id="tweeter-form" class="tweet-form" action="/tweets/" method="POST">
+            <label class="humming" for="tweet-text">What are you humming about?</label>
+            <textarea id="tweet-text" name="text"></textarea>
+            <div class="button-counter">
+             <button class="tweet-button" type="submit">Tweet</button>
+             <output id="tweet-count" class="tweet-counter" name="counter" for="tweet-text">140</output>
+           </div>
+          </form>
+        </section>
 
-      <!-- Container for tweets -->
-      <section class="tweets-container">
-      </section>
-  </section>
-
-    </main>
+        <!-- Container for tweets -->
+       <section class="tweets-container"></section>
+      </main>
+    </section>
   </body>
 </html>

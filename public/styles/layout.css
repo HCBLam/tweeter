@@ -19,7 +19,6 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
 
 /* The Main part of the body */
@@ -29,7 +28,6 @@ main {
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
-
 }
 
 /*
