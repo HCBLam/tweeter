@@ -18,7 +18,7 @@ $(() => {
 
 
   // Escape function to prevent XSS
-  const escapeText = function (str) {
+  const escapeText = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -61,7 +61,7 @@ $(() => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.prepend($tweet);
-    };
+    }
   };
 
 
@@ -74,11 +74,11 @@ $(() => {
       success: (tweets) => {
         renderTweets(tweets);
       },
-      error: (err) => {
+      error: () => {
         console.log('Could not get the tweets information.');
       }
     });
-  }
+  };
 
   loadTweets();
 
@@ -93,7 +93,7 @@ $(() => {
     // Validation check to see if the input is empty; slide down error message
     if (!$tweetText.trim() || $tweetText.trim() === '') {
       $("div#error-warning").slideUp();
-      const emptyMsg = 'Your tweet is empty! Please write something tweety!'
+      const emptyMsg = 'Your tweet is empty! Please write something tweety!';
       errorMessage(emptyMsg);
       return;
     }
@@ -101,7 +101,7 @@ $(() => {
     // Validation check to see if the input is too long; slide down error message
     if ($tweetText.length > 140) {
       $("div#error-warning").slideUp();
-      const longMsg = 'Your tweet is over the character limit!'
+      const longMsg = 'Your tweet is over the character limit!';
       errorMessage(longMsg);
       return;
     }

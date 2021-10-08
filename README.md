@@ -6,13 +6,13 @@ Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery
 ## Tweeter Features
 
 Nice, clean desktop for all your tweets.
-![Desktop Layout](public/images/tweeter-desktop.png)
+![Desktop Layout](public/docs/tweeter-desktop.png)
 
 Responsive layout adjusts to your smartphone or tablet for a comfortable experience.
-![Mobile Layout](public/images/tweeter-mobile.png)
+![Mobile Layout](public/docs/tweeter-mobile.png)
 
 Tweet your messages in 140 characters or less.
-![Error Message](public/images/tweeter-error-msg.png)
+![Error Message](public/docs/tweeter-error-msg.png)
 
 ## Getting Started
 

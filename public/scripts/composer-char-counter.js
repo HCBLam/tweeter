@@ -1,7 +1,7 @@
 
 // Implementing the tweet character counter
-$(document).ready(function () {
-  $("#tweet-text").on("input", function(event) {
+$(document).ready(function() {
+  $("#tweet-text").on("input", function() {
 
     let counter = 140;
     let tweetLength = ($(this).val()).length;
@@ -11,9 +11,9 @@ $(document).ready(function () {
 
     // Determines when character limit is exceeded so that counter can change colour
     if (counter < 0) {
-      $(this).next().children(".tweet-counter").addClass("exceed-limit")
+      $(this).next().children(".tweet-counter").addClass("exceed-limit");
     } else {
-      $(this).next().children(".tweet-counter").removeClass("exceed-limit")
+      $(this).next().children(".tweet-counter").removeClass("exceed-limit");
     }
   });
 });
