@@ -1,0 +1,54 @@
+
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    margin: auto;
+  }
+
+
+  #main-header {
+    width: 25%;
+    margin-top: 240px;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+
+  #error-warning {
+    border: 5px solid red;
+    width: 100%;
+    margin-top: 200;
+    margin-bottom: 1em;
+    background-color: #f4f1ec;
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+
+
+}
+
+
+
+
+/*
+@media only screen and (max-width: 420px) {
+
+  body {
+    margin: auto;
+  }
+
+
+
+
+} */
+
+
+
+
+
+
