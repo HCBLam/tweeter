@@ -6,7 +6,6 @@
     margin: auto;
   }
 
-
   #main-header {
     width: 25%;
     margin-top: 240px;
@@ -14,38 +13,28 @@
     margin-left: 5%;
   }
 
-
-  #error-warning {
-    border: 5px solid red;
-    width: 100%;
-    margin-top: 200;
-    margin-bottom: 1em;
-    background-color: #f4f1ec;
-    color: red;
-    font-weight: bold;
+  .desktop-view {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
-
+  .container {
+    width: 50%;
+    margin-top: 185px;
+  }
 
 }
 
 
 
-
-/*
 @media only screen and (max-width: 420px) {
 
   body {
     margin: auto;
+    font-size: 20px;
   }
 
-
-
-
-} */
+}
 
 
 
