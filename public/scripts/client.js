@@ -54,7 +54,7 @@ $(() => {
 
   const renderTweets = function(tweets) {
     const $tweetsContainer = $(".tweets-container");
-    // $tweetsContainer.empty();
+    $tweetsContainer.empty();
 
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
