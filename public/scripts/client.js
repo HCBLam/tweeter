@@ -13,7 +13,9 @@ $(() => {
   // Display error message function
   const errorMessage = function(message) {
     $("div#error-warning").slideUp();
-    $(".error-message").html(`${message}`).parent().slideDown();
+    setTimeout(() => {
+      $(".error-message").html(`${message}`).parent().slideDown();
+    }, 300)
   };
 
 
